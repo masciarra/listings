@@ -2,7 +2,7 @@
 
 To run:
 
-1. Ensure you have yarn
+1. Ensure you have node >v20 and yarn
 
 npm install --global yarn
 
@@ -10,7 +10,13 @@ npm install --global yarn
 
 yarn install
 
-3. Run
+3. Duplicate .env.example and rename to .env. Modify to your PostGres DB (empty database)
+
+4. Run migrations
+
+npx prisma migrate dev --name init
+
+5. Run app
 
 yarn dev
 
